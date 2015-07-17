@@ -1,5 +1,6 @@
 .banner{
 	width:100%;
+	min-width:960px;
 }
 
 svg{
@@ -54,6 +55,18 @@ svg .ball.active .glow{
 	-o-animation : glowExpand 4s infinite;
 	-moz-animation : glowExpand 4s infinite;
 	animation : glowExpand 4s infinite;
+}
+
+svg .ball{
+	filter:url(#Gaussian_Blur);
+}
+
+svg .ball:hover{
+	filter:none;
+}
+
+svg .ball:hover .circle,svg .ball:hover .glow{
+	filter:none;
 }
 
 
