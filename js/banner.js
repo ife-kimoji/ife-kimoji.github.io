@@ -23,7 +23,7 @@
 		initBanner : function(){
 			var wh = window.innerHeight,
 				ww = window.innerWidth,
-				banner = $('.banner');
+				banner = $$('.banner');
 			banner.css('height',wh);
 
 			var msg,
@@ -48,7 +48,7 @@
 					step : Math.random()*100/10000
 				}
 				var ball = new this.Ball(msg);
-				$('.background')[0].appendChild(ball.getBall());
+				$$('.background')[0].appendChild(ball.getBall());
 				ball.start();
 			}
 
@@ -67,7 +67,7 @@
 			// 	descriptionOffsetY : 40,
 			// }
 			// var ball = new this.Ball(msg);
-			// $('svg')[0].appendChild(ball.getBall());
+			// $$('svg')[0].appendChild(ball.getBall());
 			// msg = {
 			// 	r : 110,
 			// 	origin : new this.Point(830,480),
@@ -83,7 +83,7 @@
 			// 	descriptionOffsetY : 10,
 			// }
 			// var ball = new this.Ball(msg);
-			// $('svg')[0].appendChild(ball.getBall());
+			// $$('svg')[0].appendChild(ball.getBall());
 			// msg = {
 			// 	r : 70,
 			// 	origin : new this.Point(900,130),
@@ -99,11 +99,11 @@
 			// 	descriptionOffsetY : -20,
 			// }
 			// var ball = new this.Ball(msg);
-			// $('svg')[0].appendChild(ball.getBall());
+			// $$('svg')[0].appendChild(ball.getBall());
 		},
 
 		Ball : function(o){
-			var svgdoc = $('svg')[0].ownerDocument,
+			var svgdoc = $$('svg')[0].ownerDocument,
 				ball = svgdoc.createElementNS('http://www.w3.org/2000/svg', 'g'),
 				circle = svgdoc.createElementNS('http://www.w3.org/2000/svg', 'circle'),
 				angle = o.angle,
@@ -120,8 +120,8 @@
 			this.y = o.origin.y;
 			this.color = o.color;
 
-			gearX = parseInt(parseInt($('svg').css('width'))*0.45)+75;
-			gearY = parseInt(parseInt($('svg').css('height'))*0.3)+75;
+			gearX = parseInt(parseInt($$('svg').css('width'))*0.45)+75;
+			gearY = parseInt(parseInt($$('svg').css('height'))*0.3)+75;
 
 			o.active?ball.setAttribute('class','ball active'):ball.setAttribute('class','ball');
 			circle.setAttribute('class','circle');
@@ -247,7 +247,7 @@
 
 
 	//实现一个类似JQuery的选择器，但是只能识别类，id和标签
-	$ = function(selector){
+	$$ = function(selector){
 		var target;
 		switch(selector[0]){
 			case '#':
