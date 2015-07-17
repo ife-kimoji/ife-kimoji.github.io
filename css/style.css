@@ -1,0 +1,47 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+body{
+	background-color: #eee; 
+}
+
+.container{
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.head{
+	width: 197px;
+  	word-wrap: break-word;
+}
+
+.head span{
+	font-size: 20px;
+  	color: #D5D0CE;
+}
+
+.container img{
+	width: 156px;
+    height: 160px;
+    margin: 0px 10px;
+}
+
+.line{
+	display: table;
+	margin-bottom: 40px;
+}
+
+.img{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.desc{
+	display: table-cell;
+	width: 800px;
+	height: 350px;
+	background-color: #fff;
+}
