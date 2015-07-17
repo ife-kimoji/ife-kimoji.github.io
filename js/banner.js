@@ -25,6 +25,8 @@
 				ww = window.innerWidth,
 				banner = $$('.banner');
 			banner.css('height',wh);
+			banner.css('width',ww);
+			// alert(window.width());
 
 			var msg,
 				activeNum = 3+Math.round(Math.random()*2);

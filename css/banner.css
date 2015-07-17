@@ -1,6 +1,6 @@
 .banner{
 	width:100%;
-	min-width:960px;
+	min-width:1200px;
 }
 
 svg{
@@ -20,6 +20,7 @@ svg .gear{
 	-o-animation : gearRotate 20s infinite;
 	-moz-animation : gearRotate 20s infinite;
 	animation : gearRotate 20s infinite;
+
 	-webkit-transform-origin : 50% 50%;
 	-moz-transform-origin : 50% 50%;
 	-o-transform-origin : 50% 50%;
@@ -29,27 +30,19 @@ svg .gear{
 
 @keyframes gearRotate
 {
-	to{
-		transform : rotate(360deg);
-	}
+	100% {transform : rotate(360deg);}
 }
 @-webkit-keyframes gearRotate
 {
-	to{
-		transform : rotate(360deg);
-	}
+	100% {-webkit-transform : rotate(360deg);}
 }
 @-moz-keyframes gearRotate
 {
-	to{
-		transform : rotate(360deg);
-	}
+	to {-moz-transform : rotate(360deg);}
 }
 @-o-keyframes gearRotate
 {
-	to{
-		transform : rotate(360deg);
-	}
+	to {-o-transform : rotate(360deg);}
 }
 
 svg .ball .circle,svg .ball .glow{
@@ -94,19 +87,19 @@ svg .ball:hover{
 @-webkit-keyframes circleExpand
 {
 	0% {
-		transform:scale(1);
+		-webkit-transform:scale(1);
 	}
 	12%{
-		transform:scale(1.1);
+		-webkit-transform:scale(1.1);
 	}
 	25%{
-		transform:scale(0.8);
+		-webkit-transform:scale(0.8);
 	}
 	50%{
-		transform:scale(1.3);
+		-webkit-transform:scale(1.3);
 	}
 	100%{
-		transform:scale(1);
+		-webkit-transform:scale(1);
 	}
 }
 @keyframes circleExpand
@@ -130,37 +123,37 @@ svg .ball:hover{
 @-moz-keyframes circleExpand
 {
 	0% {
-		transform:scale(1);
+		-moz-transform:scale(1);
 	}
 	12%{
-		transform:scale(1.1);
+		-moz-transform:scale(1.1);
 	}
 	25%{
-		transform:scale(0.8);
+		-moz-transform:scale(0.8);
 	}
 	50%{
-		transform:scale(1.3);
+		-moz-transform:scale(1.3);
 	}
 	100%{
-		transform:scale(1);
+		-moz-transform:scale(1);
 	}
 }
 @-o-keyframes circleExpand
 {
 	0% {
-		transform:scale(1);
+		-o-transform:scale(1);
 	}
 	12%{
-		transform:scale(1.1);
+		-o-transform:scale(1.1);
 	}
 	25%{
-		transform:scale(0.8);
+		-o-transform:scale(0.8);
 	}
 	50%{
-		transform:scale(1.3);
+		-o-transform:scale(1.3);
 	}
 	100%{
-		transform:scale(1);
+		-o-transform:scale(1);
 	}
 }
 
@@ -168,11 +161,11 @@ svg .ball:hover{
 {
 	from{
 		opacity: 1;
-		transform:scale(1);
+		-webkit-transform:scale(1);
 	}
 	to{
 		opacity: 0;
-		transform:scale(2);
+		-webkit-transform:scale(2);
 	}
 }
 @keyframes glowExpand
@@ -190,22 +183,22 @@ svg .ball:hover{
 {
 	from{
 		opacity: 1;
-		transform:scale(1);
+		-moz-transform:scale(1);
 	}
 	to{
 		opacity: 0;
-		transform:scale(2);
+		-moz-transform:scale(2);
 	}
 }
 @-o-keyframes glowExpand
 {
 	from{
 		opacity: 1;
-		transform:scale(1);
+		-o-transform:scale(1);
 	}
 	to{
 		opacity: 0;
-		transform:scale(2);
+		-o-transform:scale(2);
 	}
 }
 
