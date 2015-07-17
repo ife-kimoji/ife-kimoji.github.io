@@ -19,12 +19,33 @@ svg .gear{
 	-webkit-animation : gearRotate 20s infinite;
 	-o-animation : gearRotate 20s infinite;
 	-moz-animation : gearRotate 20s infinite;
-	animation : geaeRotate 20s infinite;
+	animation : gearRotate 20s infinite;
 	-webkit-transform-origin : 50% 50%;
+	-moz-transform-origin : 50% 50%;
+	-o-transform-origin : 50% 50%;
 	transform-origin:50% 50%;
+
 }
 
+@keyframes gearRotate
+{
+	to{
+		transform : rotate(360deg);
+	}
+}
 @-webkit-keyframes gearRotate
+{
+	to{
+		transform : rotate(360deg);
+	}
+}
+@-moz-keyframes gearRotate
+{
+	to{
+		transform : rotate(360deg);
+	}
+}
+@-o-keyframes gearRotate
 {
 	to{
 		transform : rotate(360deg);
@@ -40,6 +61,8 @@ svg .ball .circle,svg .ball .glow{
 	-webkit-animation-direction : normal;
 	-webkit-animation-delay : 0s;
 	-webkit-transform-origin : 50% 50%;
+	-moz-transform-origin : 50% 50%;
+	-o-transform-origin : 50% 50%;
 	transform-origin:50% 50%;
 }
 
