@@ -8,13 +8,12 @@ body{
 }
 
 .container{
-	width: 1000px;
+	width: 960px;
 	margin: 0px auto;
 }
 
 .head{
-	width: 197px;
-  	word-wrap: break-word;
+	width: 200px;
 }
 
 .head span{
@@ -26,12 +25,12 @@ body{
 }
 
 .head_hr{
-	margin-bottom: 80px;
-	margin-top: -10px;
+	margin-bottom: 50px;
+	/*margin-top: -10px;*/
 }
 
 .content{
-	float: right;
+	margin-left: 150px;
 }
 
 .line{
@@ -40,9 +39,9 @@ body{
 }
 
 .line img{
-	width: 156px;
-    height: 160px;
-    margin: 0px 10px;
+	width: 80px;
+    height: 80px;
+    margin:0px 15px;
 }
 
 .img{
@@ -52,8 +51,8 @@ body{
 
 .desc{
 	display: table-cell;
-	width: 700px;
-	height: 300px;
+	width: 600px;
+	height: 150px;
 	background-color: #fff;
 	padding: 20px;
 }
