@@ -1,0 +1,72 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>KimojiMarkdown</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="author" content="kimoji"/>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.css"> -->
+	<link rel="stylesheet" href="../css/markdown.css">
+	<link rel="stylesheet" href="../css/solarized_light.min.css">
+	<link rel="stylesheet" href="../css/bar.css">
+	<link rel="stylesheet" href="../css/text.css">
+	
+</head>
+<body>
+
+<nav>
+	<span class="brand">KimojiMarkdown</span>
+	<div class="operations-wrap">
+		<button class="save-btn">Save</button>
+		<button class="auto-render-btn" title="Auto Render">AR</button>
+		<button class="render-btn">Render</button>
+	</div>
+</nav>
+
+<div class="site-wrap">
+	<div class="panel folder-wrap folded" name="folder-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content"></div>
+		<a href="javascript:void(0);" class="new-folder-btn"></a>
+	</div>
+
+	<div class="panel file-wrap folded" name="file-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content"></div>
+		<a href="javascript:void(0);" class="new-file-btn" disabled=true></a>
+	</div>
+
+	<div class="panel textarea-wrap" name="textarea-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content">
+			<div class="title-wrap">
+				<input type="text" name="title"/>		
+				<a href="javascript:void(0)" class="close">&times;</a>
+			</div>
+			<textarea id="edit-area"></textarea>
+		</div>
+		<div class="mask"></div>
+	</div>
+
+	<div class="panel render-area" name="render-area">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content">
+			<a href="javascript:void(0)" class="close">&times;</a>
+			<div id="markdown"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script> -->
+<script src="../js/jquery-1.11.1.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/lodash/2.4.1/lodash.js"></script> -->
+<script src="../js/highlight.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+<script src="../js/remarkable.min.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/side.js"></script>
+<script src="../js/text.js"></script>
+
+</body>
+</html>

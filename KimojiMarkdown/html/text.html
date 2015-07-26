@@ -1,0 +1,146 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>KimojiMarkdown</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta http-equiv="author" content="kimoji"/>
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.2.0/css/bootstrap.css"> -->
+	<link rel="stylesheet" href="../css/markdown.css">
+	<link rel="stylesheet" href="../css/solarized_light.min.css">
+	<link rel="stylesheet" href="../css/text.css">
+</head>
+<body>
+
+<nav>
+	<span class="brand">KimojiMarkdown</span>
+	<div class="operations-wrap">
+		<button class="save-btn">Save</button>
+		<button class="auto-render-btn" title="Auto Render">AR</button>
+		<button class="render-btn">Render</button>
+	</div>
+</nav>
+
+<div class="site-wrap">
+	<div class="panel folder-wrap folded" name="folder-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content"></div>
+	</div>
+
+	<div class="panel file-wrap folded" name="file-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content"></div>
+	</div>
+
+	<div class="panel textarea-wrap" name="textarea-wrap">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content">
+			<div class="title-wrap">
+				<input type="text" name="title"/>		
+				<a href="javascript:void(0)" class="close">&times;</a>
+			</div>
+			<textarea id="edit-area">
+# KimojiMarkdown db.js 接口说明
+-----------
+- **db.js**封装了存取markdown编辑器的接口，使用的是```HTML5 indexedDB```
+- 接口封装在```DB```这个全局对象内，使用```DB.*()```方法调用
+- **data.js**为预存的数据，引入一次即可
+- 所有函数的返回值都至少包含```isSuccess```字段，标识此次操作是否成功,如果是查询操作并且成功的话返回的数据保存在```result```字段中，失败的信息保存在```message```字段中
+# 
+# 
+
+### open()
+> *开启数据库*
+> 在操作数据前需要先调用此方法（调用一次即可）
+
+# 
+### fetchAllFolder(callback)
+> *取回所有文件夹数据*
+> callback-回调函数
+
+# 
+### addNewFolder(fname,callback)
+> *增加新文件夹*
+> fname-文件夹名
+> callback-回调函数
+
+# 
+### removeFolderByFid(fid,callback)
+> *删除文件夹*
+> fid-文件夹id
+> callback-回调函数
+
+# 
+### updateFolderByFid(fid,fname,callback)
+> *更新文件夹信息*
+> fid-文件夹id
+> fname-文件夹名
+> callback-回调函数
+
+# 
+### fetchAllFilesByFid(fid,callback)
+> *取回文件夹下的文件*
+> fid-文件夹id
+> callback-回调函数
+
+# 
+### addNewFile(finame,content,fid,callback)
+> *增加新文件*
+> finame-文件名
+> content-文件内容
+> fid-所属文件夹id
+> callback-回调函数
+
+# 
+### removeFileByFiid(fiid,callback)
+> *删除文件*
+> fiid-文件id
+> callback-回调函数
+
+# 
+### updateFileByFiid(fiid,finame,content,fid,callback)
+> *更新文件*
+> fiid-文件id
+> finame-文件名
+> content-文件内容
+> fid-所属文件夹id
+> callback-回调函数
+
+# 
+### fetchFileByFiid(fiid,callback)
+> *取回文件内容*
+> fiid-文件id
+> callback-回调函数
+```javascript
+console.log('aaaa');
+//hhhh
+````
+![github](../img/minion.png)
+
+
+
+
+			</textarea>
+		</div>
+	</div>
+
+	<div class="panel render-area" name="render-area">
+		<a href="javascript:void(0);" class="toggle-panel-btn"></a>
+		<div class="content">
+			<a href="javascript:void(0)" class="close">&times;</a>
+			<div id="markdown"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.5/es5-shim.min.js"></script> -->
+<script src="../js/jquery-1.11.1.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/lodash/2.4.1/lodash.js"></script> -->
+<script src="../js/highlight.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+<script src="../js/remarkable.min.js"></script>
+<script src="../js/db.js"></script>
+<script src="../js/text.js"></script>
+</body>
+</html>
